@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TestWindow</class>
+ <widget class="QMainWindow" name="TestWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TestWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="pluginFrame">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="blankWidget">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>388</width>
+            <height>296</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="DummyTable" name="pluginTableWidget">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionPlay"/>
+    <addaction name="actionGetInformation"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuTest">
+    <property name="title">
+     <string>GUI Test</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionReceiveList"/>
+    <addaction name="actionResetReceiveList"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTest"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionPlay"/>
+   <addaction name="actionGetInformation"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="windowTitle">
+    <string>Output</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPlainTextEdit" name="outputText">
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionReceiveList"/>
+   <addaction name="actionResetReceiveList"/>
+  </widget>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="toolTip">
+    <string>Close this application.</string>
+   </property>
+  </action>
+  <action name="actionPlay">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Play</string>
+   </property>
+   <property name="toolTip">
+    <string>Execute functionMain in the loaded plugin.</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Open Plugin</string>
+   </property>
+  </action>
+  <action name="actionReceiveList">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Call ReceiveList</string>
+   </property>
+   <property name="toolTip">
+    <string>Call receiveList function in the loaded plugin. 
+
+What is not reflected in the table of MainWindow is a specification to prevent
+the accidental undo/redo function from being applied at initialization.
+
+(It can be used only by GUI contained plugin.)</string>
+   </property>
+  </action>
+  <action name="actionResetReceiveList">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Reset ReceiveList</string>
+   </property>
+  </action>
+  <action name="actionGetInformation">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Get Information</string>
+   </property>
+   <property name="toolTip">
+    <string>Show plugin information which includes :
+- Name
+- Version
+- Author
+- Tooltip</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DummyTable</class>
+   <extends>QTableWidget</extends>
+   <header>dummytable.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
