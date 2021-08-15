@@ -120,7 +120,7 @@ void DownloadWidget::openFile()
 void DownloadWidget::openFolder()
 {
     QFileDialog dialog(this);
-    dialog.setFileMode(QFileDialog::DirectoryOnly);
+    dialog.setFileMode(QFileDialog::Directory);
     dialog.setOption(QFileDialog::ShowDirsOnly, true);
     QString dir = dialog.getExistingDirectory(this,
                                  tr("Open Directory"),

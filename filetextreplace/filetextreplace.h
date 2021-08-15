@@ -6,7 +6,7 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QTextStream>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <filetextreplacewidget.h>
 
 class FILETEXTREPLACESHARED_EXPORT FileTextReplace

@@ -36,14 +36,13 @@ int FileTextReplace::functionMain(int argc, QStringList *args)
 
     QString tmpstr;
 
-    QRegExp re = QRegExp(args->at(2));
+    QRegularExpression re = QRegularExpression(args->at(2));
 
     QTextStream in(&res);
     tmpstr = in.readAll();
 
     res.close();
-    re.indexIn(tmpstr);
-    QString repl = re.capturedTexts().at(0);
+    QString repl = re.match(tmpstr).capturedTexts().at(0);
 
     tmpstr = tmpstr.replace(repl, args->at(3));
 

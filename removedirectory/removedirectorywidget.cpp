@@ -22,7 +22,7 @@ RemoveDirectoryWidget::~RemoveDirectoryWidget()
 
 void RemoveDirectoryWidget::receiveList(QStringList args)
 {
-    int counter = args.count();
+    qsizetype counter = args.count();
 
     // block unexpected sendList signal
     this->blockSignals(true);
@@ -59,7 +59,7 @@ void RemoveDirectoryWidget::rmpathTextChanged(const QString &arg1)
 void RemoveDirectoryWidget::rmToolButtonClicked()
 {
     QFileDialog dialog(this);
-    dialog.setFileMode(QFileDialog::DirectoryOnly);
+    dialog.setFileMode(QFileDialog::Directory);
     dialog.setOption(QFileDialog::ShowDirsOnly, true);
     QString dir = dialog.getExistingDirectory(this,
                                               tr("Open Directory"),
