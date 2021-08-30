@@ -119,7 +119,7 @@ bool BufferedCopy::copyData(QString source, QString dest, long cachesize)
         currentprogress
             = QString::number(static_cast<double>(current)/filesize * 100, 'f', 2);
 
-        if(currentprogress != prevprogress)
+        if(currentprogress != *prevprogress)
             functionMessage(tr("Progress %1 %").arg(currentprogress), MessageType::Update);
 
         *prevprogress = currentprogress;

@@ -29,7 +29,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 # ExtraPluginInterface
-include($$PWD/../AutoBatchRunner/src/plugininterface/plugininterface.pri)
+include($$PWD/../AutoBatchTools/src/plugininterface/plugininterface.pri)
 
 TRANSLATIONS += \
         $$PWD/translation/filetextreplace_en.ts \
