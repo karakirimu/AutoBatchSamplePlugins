@@ -2,7 +2,7 @@
 #define BUFFEREDCOPY_H
 
 #include "bufferedcopy_global.h"
-#include "../plugininterface/extraplugininterface.h"
+#include "extraplugininterface.h"
 #include "settingwidget.h"
 #include <QFile>
 #include <QFileInfo>

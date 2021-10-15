@@ -3,7 +3,7 @@
 
 #include "removedirectory_global.h"
 #include "removedirectorywidget.h"
-#include "../plugininterface/extraplugininterface.h"
+#include "extraplugininterface.h"
 #include <QFile>
 #include <QDir>
 #include <QPoint>

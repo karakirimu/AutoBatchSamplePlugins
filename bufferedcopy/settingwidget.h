@@ -18,7 +18,7 @@
 #define SETTINGWIDGET_H
 
 #include <QHash>
-#include "../plugininterface/pluginwidget.h"
+#include "pluginwidget.h"
 
 namespace Ui {
 class SettingWidget;

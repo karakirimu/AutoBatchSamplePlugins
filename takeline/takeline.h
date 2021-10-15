@@ -1,24 +1,24 @@
-#ifndef TAKELINEPLUGIN_H
-#define TAKELINEPLUGIN_H
+#ifndef TAKELINE_H
+#define TAKELINE_H
 
 #include "takeline_global.h"
 #include "takelinewidget.h"
-#include "../plugininterface/extraplugininterface.h"
+#include "extraplugininterface.h"
 
 #include <QFile>
 #include <QTextStream>
 
-class TAKELINEPLUGINSHARED_EXPORT TakeLinePlugin
+class TAKELINESHARED_EXPORT TakeLine
         : public ExtraPluginInterface
 {
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID "abr.ExtraPluginInterface.TakeLinePlugin"
-                      FILE "takelineplugin.json")
+    Q_PLUGIN_METADATA(IID "abr.ExtraPluginInterface.TakeLine"
+                      FILE "takeline.json")
     Q_INTERFACES(ExtraPluginInterface)
 
 public:
-    TakeLinePlugin();
-    ~TakeLinePlugin() override;
+    TakeLine();
+    ~TakeLine() override;
 
     int functionMain(int argc, QStringList *args) override;
 
@@ -27,4 +27,4 @@ private:
     TakeLineWidget *tlwidget;
 };
 
-#endif // TAKELINEPLUGIN_H
+#endif // TAKELINE_H

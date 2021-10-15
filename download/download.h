@@ -9,10 +9,6 @@
 #include <QNetworkReply>
 #include "extraplugininterface.h"
 
-#ifdef OPENSSL_DEFINED
-#include <openssl/aes.h>
-#endif
-
 class DOWNLOAD_EXPORT Download : public ExtraPluginInterface
 {
     Q_OBJECT

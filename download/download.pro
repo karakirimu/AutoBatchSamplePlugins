@@ -25,12 +25,11 @@ DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs depr
 include($$PWD/../AutoBatchTools/src/plugininterface/plugininterface.pri)
 
 # If you want to perform a download that includes https in Windows,
-# you need to download and install OpenSSL.
+# you need to download and install OpenSSL Light v1.1.1 (in Qt 6.1.3).
 # When setting OpenSSL, uncomment the following win32 block.
 #win32 {
 #    contains(QMAKE_TARGET.arch, "x86_64"){
 #        # 64 bit
-#        DEFINES  += "OPENSSL_DEFINED=\"1\""
 #        INCLUDEPATH += "C:/Program Files/OpenSSL-Win64/include"
 #        LIBS += -L"C:/Program Files/OpenSSL-Win64/lib" -llibcrypto \
 #                -L"C:/Program Files/OpenSSL-Win64/lib" -llibssl
@@ -47,7 +46,7 @@ HEADERS += \
     downloadwidget.h
 
 TRANSLATIONS += \
-    download_en_US.ts
+    translation/download_en_US.ts
 
 # Default rules for deployment.
 unix {

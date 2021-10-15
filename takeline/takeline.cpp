@@ -1,6 +1,6 @@
 #include "takeline.h"
 
-TakeLinePlugin::TakeLinePlugin()
+TakeLine::TakeLine()
 {
     PluginInformation pinfo;
     pinfo.name = "TakeLine";
@@ -15,12 +15,12 @@ TakeLinePlugin::TakeLinePlugin()
     setInformation(pinfo);
 }
 
-TakeLinePlugin::~TakeLinePlugin()
+TakeLine::~TakeLine()
 {
     delete tlwidget;
 }
 
-int TakeLinePlugin::functionMain(int argc, QStringList *args)
+int TakeLine::functionMain(int argc, QStringList *args)
 {
     if(argc != 3) return -1;
 

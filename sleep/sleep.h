@@ -3,7 +3,7 @@
 
 #include "sleep_global.h"
 #include "sleepwidget.h"
-#include "../plugininterface/extraplugininterface.h"
+#include "extraplugininterface.h"
 #include <QEventLoop>
 #include <QTimer>
 

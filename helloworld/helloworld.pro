@@ -32,7 +32,7 @@ HEADERS += \
     helloworld.h
 
 TRANSLATIONS += \
-    helloworld_en_US.ts
+    $$PWD/translation/helloworld_en_US.ts
 
 # Default rules for deployment.
 unix {

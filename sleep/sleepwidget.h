@@ -1,7 +1,7 @@
 #ifndef SLEEPWIDGET_H
 #define SLEEPWIDGET_H
 
-#include "../plugininterface/pluginwidget.h"
+#include "pluginwidget.h"
 
 namespace Ui {
 class SleepWidget;
