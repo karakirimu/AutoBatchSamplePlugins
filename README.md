@@ -1,4 +1,4 @@
-# abr-plugin-samples
+# AutoBatchSamplePlugins
 
 This sample contains several plugins to extend AutoBatchRunner.The following samples are currently included in the project.
 
@@ -22,7 +22,7 @@ This sample contains several plugins to extend AutoBatchRunner.The following sam
 
 - download
 
-  Download files from HTTP.
+  Download files from HTTP. OpenSSL (V1.1.1L) must be installed in order to run downloads from HTTPS.
 
   
 
@@ -73,21 +73,31 @@ This sample contains several plugins to extend AutoBatchRunner.The following sam
 
 
 
-## Build (Qt Creator)
+## Build (QMake)
 
 1. clone this repository.
 
-2. move directory to abr-plugin-samples.
+2. move directory to AutoBatchSamplePlugins.
 
 3. clone AutoBatchRunner repository.
 
    ```
-   git clone https://github.com/karakirimu/AutoBatchRunner.git
+   git clone https://github.com/karakirimu/AutoBatchTools.git
    ```
 
 4. Open the abr-plugin-samples.pro in Qt Creator.
 
 5. Build.
+
+## Build (CMake)
+
+1. clone this repository.
+
+2. move directory to AutoBatchSamplePlugins. (AutoBatchTools will be automatically cloned locally.)
+
+3. Open the CMakeLists.txt in Qt Creator.
+
+4. Build.
 
 
 
