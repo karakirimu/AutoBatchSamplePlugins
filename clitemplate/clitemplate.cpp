@@ -1,6 +1,6 @@
-#include "clitemplete.h"
+#include "clitemplate.h"
 
-CliTemplete::CliTemplete()
+CliTemplate::CliTemplate()
 {
     PluginInformation pinfo;
 
@@ -15,12 +15,12 @@ CliTemplete::CliTemplete()
     setInformation(pinfo);
 }
 
-CliTemplete::~CliTemplete()
+CliTemplate::~CliTemplate()
 {
 
 }
 
-int CliTemplete::functionMain(int argc, QStringList *args)
+int CliTemplate::functionMain(int argc, QStringList *args)
 {
     Q_UNUSED(argc)
     Q_UNUSED(args)

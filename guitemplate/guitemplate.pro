@@ -1,7 +1,7 @@
 QT += widgets
 
 TEMPLATE = lib
-DEFINES += GUITEMPLETE_LIBRARY
+DEFINES += GUITEMPLATE_LIBRARY
 
 CONFIG += c++11 \
           skip_target_version_ext \ # Prevent automatic conversion of dll name
@@ -17,16 +17,16 @@ DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs depr
 include($$PWD/../AutoBatchTools/src/plugininterface/plugininterface.pri)
 
 SOURCES += \
-    guitemplete.cpp \
-    guitempletewidget.cpp
+    guitemplate.cpp \
+    guitemplatewidget.cpp
 
 HEADERS += \
-    guitemplete_global.h \
-    guitemplete.h \
-    guitempletewidget.h
+    guitemplate_global.h \
+    guitemplate.h \
+    guitemplatewidget.h
 
 TRANSLATIONS += \
-    guitemplete_en_US.ts
+    guitemplate_en_US.ts
 
 # Default rules for deployment.
 unix {
@@ -35,7 +35,7 @@ unix {
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    guitemplete.json
+    guitemplate.json
 
 FORMS += \
-    guitempletewidget.ui
+    guitemplatewidget.ui

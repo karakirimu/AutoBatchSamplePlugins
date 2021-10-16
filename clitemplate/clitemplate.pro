@@ -2,7 +2,7 @@ QT      += core gui \
             widgets
 
 TEMPLATE = lib
-DEFINES += CLITEMPLETE_LIBRARY
+DEFINES += CLITEMPLATE_LIBRARY
 
 CONFIG += c++11 \
           skip_target_version_ext \ # Prevent automatic conversion of dll name
@@ -18,14 +18,14 @@ DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs depr
 include($$PWD/../AutoBatchTools/src/plugininterface/plugininterface.pri)
 
 SOURCES += \
-    clitemplete.cpp
+    clitemplate.cpp
 
 HEADERS += \
-    clitemplete_global.h \
-    clitemplete.h
+    clitemplate_global.h \
+    clitemplate.h
 
 TRANSLATIONS += \
-    clitemplete_en_US.ts
+    clitemplate_en_US.ts
 
 # Default rules for deployment.
 unix {
@@ -34,4 +34,4 @@ unix {
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    clitemplete.json
+    clitemplate.json

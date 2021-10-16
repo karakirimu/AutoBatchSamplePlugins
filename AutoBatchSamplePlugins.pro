@@ -19,9 +19,9 @@ win32-msvc* {
 }
 
 SUBDIRS += \
-    clitemplete \
+    clitemplate \
     download \
-    guitemplete \
+    guitemplate \
     helloworld \
     takeline \
     bufferedcopy \

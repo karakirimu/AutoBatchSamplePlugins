@@ -1,22 +1,22 @@
-#include "guitempletewidget.h"
-#include "ui_guitempletewidget.h"
+#include "guitemplatewidget.h"
+#include "ui_guitemplatewidget.h"
 
-GuiTempleteWidget::GuiTempleteWidget(QWidget *parent) :
+GuiTemplateWidget::GuiTemplateWidget(QWidget *parent) :
     PluginWidget(parent),
-    ui(new Ui::GuiTempleteWidget)
+    ui(new Ui::GuiTemplateWidget)
 {
     ui->setupUi(this);
 
     connect(ui->countButton, &QPushButton::clicked,
-            this, &GuiTempleteWidget::countClicked);
+            this, &GuiTemplateWidget::countClicked);
 }
 
-GuiTempleteWidget::~GuiTempleteWidget()
+GuiTemplateWidget::~GuiTemplateWidget()
 {
     delete ui;
 }
 
-void GuiTempleteWidget::receiveList(QStringList args)
+void GuiTemplateWidget::receiveList(QStringList args)
 {
     QString result = "";
     for(QString& arg : args){
@@ -27,7 +27,7 @@ void GuiTempleteWidget::receiveList(QStringList args)
     ui->plainTextEdit->setPlainText(result);
 }
 
-void GuiTempleteWidget::countClicked()
+void GuiTemplateWidget::countClicked()
 {
     static int counter = 0;
     counter++;

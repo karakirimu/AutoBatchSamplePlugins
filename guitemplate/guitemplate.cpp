@@ -1,6 +1,6 @@
-#include "guitemplete.h"
+#include "guitemplate.h"
 
-GuiTemplete::GuiTemplete()
+GuiTemplate::GuiTemplate()
 {
     PluginInformation pinfo;
 
@@ -11,18 +11,18 @@ GuiTemplete::GuiTemplete()
 
     // If it using QWidget, set it to true. otherwise false.
     pinfo.hassettingwidget = true;
-    widget = new GuiTempleteWidget();
+    widget = new GuiTemplateWidget();
     pinfo.settingwidget = widget;
 
     setInformation(pinfo);
 }
 
-GuiTemplete::~GuiTemplete()
+GuiTemplate::~GuiTemplate()
 {
     delete widget;
 }
 
-int GuiTemplete::functionMain(int argc, QStringList *args)
+int GuiTemplate::functionMain(int argc, QStringList *args)
 {
     Q_UNUSED(argc)
 

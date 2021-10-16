@@ -1,20 +1,20 @@
-#ifndef GUITEMPLETEWIDGET_H
-#define GUITEMPLETEWIDGET_H
+#ifndef GUITEMPLATEWIDGET_H
+#define GUITEMPLATEWIDGET_H
 
 #include <QWidget>
 #include <pluginwidget.h>
 
 namespace Ui {
-class GuiTempleteWidget;
+class GuiTemplateWidget;
 }
 
-class GuiTempleteWidget : public PluginWidget
+class GuiTemplateWidget : public PluginWidget
 {
     Q_OBJECT
 
 public:
-    explicit GuiTempleteWidget(QWidget *parent = nullptr);
-    ~GuiTempleteWidget() override;
+    explicit GuiTemplateWidget(QWidget *parent = nullptr);
+    ~GuiTemplateWidget() override;
 
 public slots:
     // This function receives the current setting
@@ -25,7 +25,7 @@ private slots:
     void countClicked();
 
 private:    
-    Ui::GuiTempleteWidget *ui;
+    Ui::GuiTemplateWidget *ui;
 };
 
-#endif // GUITEMPLETEWIDGET_H
+#endif // GUITEMPLATEWIDGET_H

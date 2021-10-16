@@ -1,0 +1,12 @@
+#ifndef GUITEMPLATE_GLOBAL_H
+#define GUITEMPLATE_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(GUITEMPLATE_LIBRARY)
+#  define GUITEMPLATE_EXPORT Q_DECL_EXPORT
+#else
+#  define GUITEMPLATE_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // GUITEMPLATE_GLOBAL_H

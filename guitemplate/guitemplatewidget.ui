@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>GuiTempleteWidget</class>
- <widget class="QWidget" name="GuiTempleteWidget">
+ <class>GuiTemplateWidget</class>
+ <widget class="QWidget" name="GuiTemplateWidget">
   <property name="geometry">
    <rect>
     <x>0</x>

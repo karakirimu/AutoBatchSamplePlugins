@@ -25,11 +25,11 @@ endif()
 
 add_subdirectory(${SOURCE_DIRECTORY}/bufferedcopy)
 
-add_subdirectory(${SOURCE_DIRECTORY}/clitemplete)
+add_subdirectory(${SOURCE_DIRECTORY}/clitemplate)
 
 add_subdirectory(${SOURCE_DIRECTORY}/download)
 add_subdirectory(${SOURCE_DIRECTORY}/filetextreplace)
-add_subdirectory(${SOURCE_DIRECTORY}/guitemplete)
+add_subdirectory(${SOURCE_DIRECTORY}/guitemplate)
 add_subdirectory(${SOURCE_DIRECTORY}/helloworld)
 add_subdirectory(${SOURCE_DIRECTORY}/makedirectory)
 

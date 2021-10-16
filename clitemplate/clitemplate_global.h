@@ -1,0 +1,12 @@
+#ifndef CLITEMPLATE_GLOBAL_H
+#define CLITEMPLATE_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(CLITEMPLATE_LIBRARY)
+#  define CLITEMPLATE_EXPORT Q_DECL_EXPORT
+#else
+#  define CLITEMPLATE_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // CLITEMPLATE_GLOBAL_H
